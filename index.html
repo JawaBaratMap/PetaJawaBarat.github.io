@@ -1,1 +1,185 @@
-Hhello world
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Peta Jawa Barat</title>
+  <style>
+    /* CSS styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: ;
+    }
+
+    nav {
+      background-color: #f9f9f9;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      padding: 5px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+        .column-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+        }
+
+        .column {
+            width: 300px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+         /* Gaya CSS untuk menu pop-up */ 
+         .menu-container {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            transition: right 0.3s ease;
+            z-index: 999;
+        }
+
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 300px;
+            height: 100%;
+            background-color: #333;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            font-family: Arial, sans-serif;
+            border-radius: 20px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+            color: #FFFFFF;
+        }
+
+        .menu-header {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .menu-item {
+            text-align: center;
+            padding: 15px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .menu-item:hover {
+            color: #CCCCCC;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 20px;
+            color: #FFFFFF;
+            cursor: pointer;
+        }
+  </style>
+</head>
+<body>
+<div class="menu-container" id="menu-container">
+        <div class="menu">
+            <span class="close-btn" onclick="closeMenu()">&times;</span>
+            <h2 class="menu-header">Menu</h2>
+            <ul class="menu-list">
+                <li class="menu-item" onclick="navigateToPage('index.html')">Home</li>
+                <li class="menu-item" onclick="navigateToPage('about.html')">Kota</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        var menuContainer = document.getElementById("menu-container");
+
+        function openMenu() {
+            menuContainer.style.right = "0";
+            menuContainer.querySelector(".menu").style.transform = "translateX(0)";
+        }
+
+        function closeMenu() {
+            menuContainer.style.right = "-100%";
+            menuContainer.querySelector(".menu").style.transform = "translateX(100%)";
+        }
+
+        function navigateToPage(pageURL) {
+            window.location.href = pageURL;
+        }
+    </script>
+  <header>
+ <div onclick="openMenu()">☰</div>
+   <center><h1>Peta Jawa Barat</h1></center>
+  </header>
+
+  <main>
+   <center><h5>Jawa Barat</h5></center>
+    <center><img src="pjabar.png" width="400px"></center>
+  </main>
+  <main>   
+   <h3>Latar Belakang</h3>
+   <h4>Budaya Indonesia adalah kaya dan beragam, tercermin dalam keragaman etnis, bahasa, agama, adat istiadat, seni, dan makanan. Indonesia adalah negara kepulauan terbesar di dunia, yang terdiri dari lebih dari 17.000 pulau dan memiliki lebih dari 300 kelompok etnis yang berbeda.
+   dari 17.000 pulau, pulau Jawa Barat termasuk yang terkenal. Budaya di Jawa Barat, Indonesia, kaya dengan warisan sejarah, adat istiadat, seni, dan tradisi yang khas. Jawa Barat memiliki keberagaman suku dan etnis, termasuk suku Sunda yang merupakan mayoritas penduduk di daerah ini.</h4><h4>Bahasa Sunda adalah bahasa utama yang digunakan di Jawa Barat, namun bahasa Indonesia juga umum digunakan. Masyarakat Jawa Barat dikenal dengan keramahan, kehangatan, dan sikap gotong royong yang kuat.</h4><h4>Seni dan budaya juga menjadi bagian integral dari kehidupan masyarakat Jawa Barat. Tari Sunda, seperti tari Jaipongan dan tari Topeng, adalah bagian tak terpisahkan dari kebudayaan ini. Musik tradisional seperti angklung, gamelan, dan kacapi suling juga populer di Jawa Barat.</h4><h4>Secara keseluruhan, budaya Jawa Barat merupakan perpaduan antara tradisi, seni, adat istiadat, dan keindahan alam. Keberagaman budaya dan warisan sejarahnya membuat Jawa Barat menjadi daerah yang menarik untuk dieksplorasi dan mengenal lebih dalam tentang kekayaan budaya Indonesia.</h4>
+  </main>
+  <footer>
+    <p>&copy; 2023 Peta Jawa Barat.</p>
+  </footer>
+</body>
+</html>
+
+
+
+
