@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Peta Jawa Barat</title>
+  <style>
+    /* CSS styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: ;
+    }
+
+    nav {
+      background-color: #f9f9f9;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      padding: 5px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+        .column-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+        }
+
+        .column {
+            width: 300px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+         /* Gaya CSS untuk menu pop-up */
+        .menu-container {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            transition: right 0.3s ease;
+            z-index: 999;
+        }
+
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 300px;
+            height: 100%;
+            background-color: #333;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            font-family: Arial, sans-serif;
+            border-radius: 20px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+            color: #FFFFFF;
+        }
+
+        .menu-header {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .menu-item {
+            text-align: center;
+            padding: 15px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .menu-item:hover {
+            color: #CCCCCC;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 20px;
+            color: #FFFFFF;
+            cursor: pointer;
+        }
+  </style>
+</head>
+<body>
+<div class="menu-container" id="menu-container">
+        <div class="menu">
+            <span class="close-btn" onclick="closeMenu()">&times;</span>
+            <h2 class="menu-header">Menu</h2>
+            <ul class="menu-list">
+                <li class="menu-item" onclick="navigateToPage('index.html')">Home</li>
+                <li class="menu-item" onclick="navigateToPage('about.html')">Kota</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        var menuContainer = document.getElementById("menu-container");
+
+        function openMenu() {
+            menuContainer.style.right = "0";
+            menuContainer.querySelector(".menu").style.transform = "translateX(0)";
+        }
+
+        function closeMenu() {
+            menuContainer.style.right = "-100%";
+            menuContainer.querySelector(".menu").style.transform = "translateX(100%)";
+        }
+
+        function navigateToPage(pageURL) {
+            window.location.href = pageURL;
+        }
+    </script>
+  <header>
+ <div onclick="openMenu()">☰</div>
+    <center><h1>Peta Kota Jawa Barat</h1></center>
+  </header>
+
+  <main>
+   <center><h5>Peta Kabupaten/Kota di Jawa Barat</h5></center>
+    <center><img src="pjabar.png" width="400px"></center>
+  </main>
+  <center><h2>kota setiap MAPEL</h2></center>
+  <main>  <nav>  <div class="column-container">
+        <div class="column">
+            <h2>PPKN</h2>
+            <center><img src="PPKN.png" width="200px"></center>
+
+<h1></h1>
+           <ul>
+            <li><button><a href="PPKN.html">klik</a></button></li>
+           </ul>
+ </nav>
+        </div>
+  </main>
+  <footer>
+    <p>&copy; 2023 Peta Jawa Barat.</p>
+  </footer>
+</body>
+</html>
+
