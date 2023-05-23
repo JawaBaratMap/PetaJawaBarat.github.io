@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Peta Jawa Barat</title>
+  <style>
+    /* CSS styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: ;
+    }
+
+    nav {
+      background-color: #f9f9f9;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      padding: 5px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+        .column-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+        }
+
+        .column {
+            width: 300px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+ 
+          /* Gaya CSS untuk menu pop-up */
+        .menu-container {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            transition: right 0.3s ease;
+            z-index: 999;
+        }
+
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 300px;
+            height: 100%;
+            background-color: #333;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            font-family: Arial, sans-serif;
+            border-radius: 20px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+            color: #FFFFFF;
+        }
+
+        .menu-header {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .menu-item {
+            text-align: center;
+            padding: 15px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .menu-item:hover {
+            color: #CCCCCC;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 20px;
+            color: #FFFFFF;
+            cursor: pointer;
+        }
+         /*Gaya CCS untuk teks geser */
+.hidden-text {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.visible-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+  </style>
+</head>
+<body>
+<div class="menu-container" id="menu-container">
+        <div class="menu">
+            <span class="close-btn" onclick="closeMenu()">&times;</span>
+            <h2 class="menu-header">Menu</h2>
+            <ul class="menu-list">
+                <li class="menu-item" onclick="navigateToPage('index.html')">Home</li>
+                <li class="menu-item" onclick="navigateToPage('about.html')">Kota</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        var menuContainer = document.getElementById("menu-container");
+
+        function openMenu() {
+            menuContainer.style.right = "0";
+            menuContainer.querySelector(".menu").style.transform = "translateX(0)";
+        }
+
+        function closeMenu() {
+            menuContainer.style.right = "-100%";
+            menuContainer.querySelector(".menu").style.transform = "translateX(100%)";
+        }
+
+        function navigateToPage(pageURL) {
+            window.location.href = pageURL;
+        }
+        function toggleText() {
+  var hiddenText = document.getElementById("hiddenText");
+  hiddenText.classList.toggle("show");
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  var myText = document.getElementById("myText");
+  myText.classList.add("visible-text");
+});
+    </script>
+  <header>
+  <div onclick="openMenu()">☰</div>
+    <center><h1>MAPEL PPKN</h1></center>
+  </header>
+
+  <main>  <div class="column-container">
+        <div class="column">
+            <h3>Bandung,Garut,Ciamis</h3>
+            <center><img src="PPKN.png" width="200px"></center>
+   </div>
+  </main>
+  <main>   
+   <h2>Nama anggota mapel ppkn</h2>
+   <div id="myText" class="hidden-text">
+    <h4>-Agista Lisdya Putri Waluya/2</h4>
+    <h4>-Bagus Dwi Saputra/6</h4>
+    <h4>-Ramadhan Al Farisi/21</h4>
+    <h4>-Hafids Maulana/10</h4>
+  </div>
+</div>
+   </main>
+ <main> 
+ <h2>Upacara Adat Nenjrag Bumi</h2>
+ <div class="column-container">
+        <div class="column">
+            <h3>Bandung</h3>
+            <center><img src="bandung.png" width="200px"></center>
+<center><img src="nenjragbumi.png" width="200px"></center>
+   </div>
+   </main>
+   <main>
+     <h3>Upacara adat Nenjrag Bumi</h3>
+     <h4>Upacara ini merupakan Bentuk
+   Penghormatan kepada nenek Moyang. 
+   Tujuan ritual ini Bertujuan supaya bayi tidak mudah kaget dan ketakutan.</h4>
+ </main>
+  <main>
+ <h2>Upacara Adat Nyangku</h2>
+     <div class="column-container">
+        <div class="column">
+            <h3>Ciamis</h3>
+            <center><img src="ciamis.png" width="200px"></center>
+ <center><img src="nyangku.png" width="200px"></center>
+   </div>
+  </main>
+  <main>  
+     <h3>Upacara Adat Nyangku</h3>
+     <h4>Desa Panjalu Kabupaten Ciamis,Upacara ini merupakan upacara adat mencuci benda pusaka</h4>
+  </main>
+  <main> 
+  <h2>Upacara Adat Ngalungsur Geni</h2>
+     <div class="column-container">
+        <div class="column">
+            <h3>Garut</h3>
+            <center><img src="garut.png" width="190px"></center>
+ <center><img src="ngalungsurgeni.png" width="180px"></center>
+   </div>
+  </main>
+  <main>
+     <h3>Upacara Adat Ngalungsur Geni</h3>
+     <h4>Ngalungsur geni merupakan upacara adat siraman benda pusaka. Siraman sendiri memiliki arti mencuci. Ngalungsur berarti meneruskan dan geni adalah salah satu benda pusak</h4>
+  </main>
+  <footer>
+    <p>&copy; 2023 Peta Jawa Barat.</p>
+  </footer>
+</body>
+</html>
+
