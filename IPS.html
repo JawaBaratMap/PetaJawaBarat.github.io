@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Peta Jawa Barat</title>
+  <style>
+    /* CSS styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: ;
+    }
+
+    nav {
+      background-color: #f9f9f9;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      padding: 5px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+        .column-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+        }
+
+        .column {
+            width: 300px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+ 
+          /* Gaya CSS untuk menu pop-up */
+        .menu-container {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            transition: right 0.3s ease;
+            z-index: 999;
+        }
+
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 300px;
+            height: 100%;
+            background-color: #333;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            font-family: Arial, sans-serif;
+            border-radius: 20px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+            color: #FFFFFF;
+        }
+
+        .menu-header {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .menu-item {
+            text-align: center;
+            padding: 15px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .menu-item:hover {
+            color: #CCCCCC;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 20px;
+            color: #FFFFFF;
+            cursor: pointer;
+        }
+         /*Gaya CCS untuk teks geser */
+.hidden-text {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.visible-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+  </style>
+</head>
+<body>
+<div class="menu-container" id="menu-container">
+        <div class="menu">
+            <span class="close-btn" onclick="closeMenu()">&times;</span>
+            <h2 class="menu-header">Menu</h2>
+            <ul class="menu-list">
+                <li class="menu-item" onclick="navigateToPage('index.html')">Home</li>
+                <li class="menu-item" onclick="navigateToPage('about.html')">Kota</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        var menuContainer = document.getElementById("menu-container");
+
+        function openMenu() {
+            menuContainer.style.right = "0";
+            menuContainer.querySelector(".menu").style.transform = "translateX(0)";
+        }
+
+        function closeMenu() {
+            menuContainer.style.right = "-100%";
+            menuContainer.querySelector(".menu").style.transform = "translateX(100%)";
+        }
+
+        function navigateToPage(pageURL) {
+            window.location.href = pageURL;
+        }
+        function toggleText() {
+  var hiddenText = document.getElementById("hiddenText");
+  hiddenText.classList.toggle("show");
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  var myText = document.getElementById("myText");
+  myText.classList.add("visible-text");
+});
+    </script>
+  <header>
+  <div onclick="openMenu()">☰</div>
+    <center><h1>MAPEL IPS</h1></center>
+  </header>
+
+  <main>  <div class="column-container">
+        <div class="column">
+            <h3>Bandung,Cirebon,Garut</h3>
+            <center><img src="IPS.png" width="200px"></center>
+   </div>
+  </main>
+  <main>   
+   <h2>Nama anggota mapel ips</h2>
+    <h4>-Arletta Putri Yansena/5</h4>
+    <h4>-Felicia Destriana Ardiyanto/9</h4>
+    <h4>-Laura Defia Angelina/13</h4>
+</div>
+   </main>
+ <main><h2>MAKANAN KHAS DARI KABUPATEN BANDUNG,CIREBON,GARUT</h2></main>
+ <main> 
+ <h2>Makanan Karedok khas Bandung</h2>
+ <div class="column-container">
+        <div class="column">
+            <h3>Bandung</h3>
+            <center><img src="bandung.png" width="200px"></center>
+<center><img src="karedok.png" width="200px"></center>
+   </div>
+   </main>
+   <main>
+     <h3>Makanan Karedok</h3></h3>
+     <h4>Makanan tersebut adalah makanan khas sunda yang berbahan dasar sayuran yang disiram dengan bumbu kacang</h4>
+ </main>
+  <main>
+ <h2>Makanan Tahu Gejrot khas Cirebon</h2>
+     <div class="column-container">
+        <div class="column">
+            <h3>Cirebon</h3>
+            <center><img src="cirebon.png" width="200px"></center>
+ <center><img src="tahugedjrot.png" width="200px"></center>
+   </div>
+  </main>
+  <main>  
+     <h3>Makanan Tahu Gejrot</h3>
+     <h4>Tahu gejrot terdiri dari tahu yang sudah digoreng kemudian dipotong agak kecil lalu dimakan dengan kuah yang bumbunya terdiri dari cabai, bawang putih, bawang merah, dan gula. Biasanya disajikan di layah kecil. </h4>
+  </main>
+  <main> 
+  <h2>Makanan Dodol Khas Garut</h2>
+     <div class="column-container">
+        <div class="column">
+            <h3>Garut</h3>
+            <center><img src="garut.png" width="180px"></center>
+ <center><img src="dodol.png" width="180px"></center>
+   </div>
+  </main>
+  <main>
+     <h3>Makanan Dodol</h3>
+     <h4>Dodol merupakan salah satu jenis produk olahan hasil pertanian yang bersifat semi basah, berwarna putih sampai coklat, dibuat dari campuran tepung ketan, gula, dan santan dengan atau tanpa bahan pengawet.</h4>
+  </main>
+ <main><h2>FLORA FAUNA JAWA BARAT</h2></main>
+ <main> 
+ <h2>Fauna Jawa Barat</h2>
+ <div class="column-container">
+        <div class="column">
+            <h3>surili</h3>
+            <center><img src="surili.png" width="200px"></center>
+ </div>
+ </main>
+ <main>
+     <h3>Fauna Surili</h3>
+     <h4>Surili jawa adalah spesies monyet Dunia Lama terancam yang endemik pada sebagian pulau Jawa, Indonesia. Hewan ini menyukai hutan primer dan penghuni pohon. Terdapat dua subspesies surili jawa: Presbytis comata comata yang ditemukan di Jawa Barat dan Presbytis comata fredericae yang menghuni hutan Jawa Tengah.</h4>
+  </main>
+ <main> 
+ <h2>Flora Jawa Barat</h2>
+ <div class="column-container">
+        <div class="column">
+            <h3>Raflesia Arnoldi</h3>
+            <center><img src="raflesia.png" width="200px"></center>
+ </div>
+ </main>
+ <main>
+     <h3>Flora Raflesia Arnoldi</h3>
+     <h4>Padma raksasa adalah tumbuhan parasit obligat yang terkenal karena memiliki bunga berukuran sangat besar, bahkan merupakan bunga terbesar di dunia ke-1. Bunga Rafflesia dikatakan bunga yang unik karena hanya berupa bunga mekar tanpa daun, akar dan tidak memiliki batang.</h4>
+  </main>
+<main><h2>MATA PENCAHARIAN KABUPATEN BANDUNG, CIREBON,GARUT</h2></main>
+ <main> 
+ <h2>Mata Pencaharian kabupaten Bandung</h2>
+ <div class="column-container">
+        <div class="column">
+            <h3>Bandung</h3>
+            <center><img src="bandung.png" width="180px"></center>
+<center><img src="matabandung.png" width="150px" height="180"></center>
+ </div>
+ </main>
+ <main>
+     <h3>Mata Pencaharian Bandung</h3>
+     <h4>Mayoritas masyarakat Sunda/Bandung berprofesi sebagai petani dan berladang, ini disebabkan tanah sunda/bandung yang subur</h4>
+  </main>
+<main>
+ <h2>Mata Pencaharian kabupaten Garut</h2>
+ <div class="column-container">
+        <div class="column">
+            <h3>Garut</h3>
+            <center><img src="garut.png" width="150px"></center>
+<center><img src="matagarut.png" width="150px" height="170"></center>
+ </div>
+ </main>
+ <main>
+     <h3>Mata Pencaharian Garut</h3>
+     <h4>penduduk di kabupaten Garut sangat di dominasi oleh sektor pertanian karena potensi lahan yang luas dan subur</h4>
+  </main>
+<main>
+<h2>Mata Pencaharian Kabupaten Cirebon</h2>
+ <div class="column-container">
+        <div class="column">
+            <h3>Cirebon</h3>
+            <center><img src="cirebon.png" width="150px"></center>
+<center><img src="matacirebon.png" width="150px" height="180px"></center>
+ </div>
+ </main>
+ <main>
+     <h3>Mata Pencaharian Cirebon</h3>
+     <h4>Masyarakat Cirebon rata-rata bermata pencaharian sebagai nelayan,Pedagang/Pengusaha karena Cirebon termasuk kota yang cukup besar</h4>
+  </main>
+ <footer>
+    <p>&copy; 2023 Peta Jawa Barat.</p>
+  </footer>
+</body>
+</html>
