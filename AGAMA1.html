@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AGAMA 1</title>
+  <style>
+    /* CSS styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: ;
+    }
+
+    nav {
+      background-color: #f9f9f9;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      color: #333;
+      text-decoration: none;
+      padding: 5px;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+        .column-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+        }
+
+        .column {
+            width: 300px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+ 
+          /* Gaya CSS untuk menu pop-up */
+        .menu-container {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            transition: right 0.3s ease;
+            z-index: 999;
+        }
+
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 300px;
+            height: 100%;
+            background-color: #333;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            font-family: Arial, sans-serif;
+            border-radius: 20px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+            color: #FFFFFF;
+        }
+
+        .menu-header {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .menu-item {
+            text-align: center;
+            padding: 15px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .menu-item:hover {
+            color: #CCCCCC;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 20px;
+            color: #FFFFFF;
+            cursor: pointer;
+        }
+         /*Gaya CCS untuk teks geser */
+.hidden-text {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.visible-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+  </style>
+</head>
+<body>
+<div class="menu-container" id="menu-container">
+        <div class="menu">
+            <span class="close-btn" onclick="closeMenu()">&times;</span>
+            <h2 class="menu-header">Menu</h2>
+            <ul class="menu-list">
+                <li class="menu-item" onclick="navigateToPage('index.html')">Home</li>
+                <li class="menu-item" onclick="navigateToPage('about.html')">Kota</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        var menuContainer = document.getElementById("menu-container");
+
+        function openMenu() {
+            menuContainer.style.right = "0";
+            menuContainer.querySelector(".menu").style.transform = "translateX(0)";
+        }
+
+        function closeMenu() {
+            menuContainer.style.right = "-100%";
+            menuContainer.querySelector(".menu").style.transform = "translateX(100%)";
+        }
+
+        function navigateToPage(pageURL) {
+            window.location.href = pageURL;
+        }
+        function toggleText() {
+  var hiddenText = document.getElementById("hiddenText");
+  hiddenText.classList.toggle("show");
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  var myText = document.getElementById("myText");
+  myText.classList.add("visible-text");
+});
+    </script>
+  <header>
+  <h1><div onclick="openMenu()">☰</div></h1>
+    <center><h1>MAPEL AGAMA 1</h1></center>
+  </header>
+
+  <main>  <div class="column-container">
+        <div class="column">
+            <h3>Indramayu,Cirebon,Bogor</h3>
+            <center><img src="AGAMA1.png" width="200px"></center>
+   </div>
+  </main>
+  <main>   
+   <h2>Nama anggota mapel agama 1</h2>
+    <h4>-Afdholul Rizal/1</h4>
+    <h4>-Vella Azzarah Jaelani/29</h4>
+    <h4>-Diyastien Vira Al Rizkyah/8</h4>
+</div>
+   </main>
+ <main><h2>TEMPAT IBADAH AGAMA ISLAM,HINDU-BUDHA,PROTESTAN,KHATOLIK PERTAMA DI JAWA BARAT</h2></main>
+ <main> 
+ <h2>Islam (Cirebon)</h2>
+ <div class="column-container">
+        <div class="column">
+            <h3>Cirebon</h3>
+            <center><img src="cirebon.png" width="200px"></center>
+<center><img src="islam.png" width="200px"></center>
+   </div>
+   </main>
+   <main>
+     <h3>Tempat Ibadah Agama Islam Pertama di Jawa Barat</h3></h3>
+     <h4>Agama Islam pertama kali ditempatkan di cirebon pada abad ke 15, dan didirikannya pada tahun 1498 Masehi, dan disebut dengan MASJID AGUNG SANG CIPTARASA.
+     Penganut agama islam pertama kali dan yang pernah datang dan tinggal di jawa barat, yakni Haji Purwa pada tahun 1337 Masehi.</h4>
+ </main>
+  <main>
+ <h2>Hindu-Budha (Bogor)</h2>
+     <div class="column-container">
+        <div class="column">
+            <h3>Bogor</h3>
+            <center><img src="bogor.png" width="200px"></center>
+ <center><img src="hindu.png" width="200px"></center>
+   </div>
+  </main>
+  <main>  
+     <h3>Tempat Ibadah Agama Hindu-Budha Pertama di Jawa Barat</h3>
+     <h4>Agama Hindu-Budha pertama kali ditempatkan di bogor pada abad ke 4, dan didirikannya pada abad ke 5 yang disebut dengan KERAJAAN TARUMANEGARA. </h4>
+  </main>
+  <main> 
+  <h2>Protestan (Indramayu)</h2>
+     <div class="column-container">
+        <div class="column">
+            <h3>Indramayu</h3>
+            <center><img src="indramayu.png" width="180px"></center>
+ <center><img src="protestan.png" width="180px"></center>
+   </div>
+  </main>
+  <main>
+     <h3>Tempat Ibadah Agama Kristen Protestan Pertama di Jawa Barat</h3>
+     <h4>Agama Kristen Protestan pertama kali di tempatkan di indramayu pada abad ke 19 dan didirikannya pada tahun 1858, yang disebut dengan GKI (Gereja Kristen Indonesia).</h4>
+ </main>
+ <main>
+ <h2>Khatolik (Cirebon)</h2>
+ <div class="column-container">
+        <div class="column">
+            <h3>Cirebon</h3>
+            <center><img src="cirebon.png" width="200px"></center>
+          <center><img src="khatolik.png" width="200px"></center>
+ </div>
+ </main>
+ <main>
+     <h3>Tempat Ibadah Agama Kristen Khatolik Pertama di Jawa Barat</h3> 
+     <h4>Agama Kristen Khatolik pertama kali ditempatkan di cirebon pada tahun 1878, dan didirikannya pada tahun 1880 masehi. yang di sebut dengan GEREJA SANTO YUSUF CIREBON.</h4>
+  </main>
+
+ <footer>
+    <p>&copy; 2023 Peta Jawa Barat.</p>
+  </footer>
+</body>
+</html>
